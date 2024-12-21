@@ -1,5 +1,5 @@
 serverAddr = "{{ .Envs.HOST_IP }}"
-serverPort = ****
+serverPort = *
 
 auth.method = "token"
 auth.token = "{{ .Envs.FRP_TOKEN }}"
@@ -8,8 +8,8 @@ transport.poolCount = 5
 transport.protocol = "kcp"
 
 [[proxies]]
-name = "****.ssh"
+name = "*.ssh"
 type = "tcp"
 localIP = "127.0.0.1"
 localPort = 22
-remotePort = ****
+remotePort = *
