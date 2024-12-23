@@ -4,12 +4,10 @@ serverPort = *
 auth.method = "token"
 auth.token = "{{ .Envs.FRP_TOKEN }}"
 
-transport.poolCount = 5
-transport.protocol = "kcp"
-
 [[proxies]]
 name = "*.ssh"
-type = "tcp"
+type = "tcpmux"
+multiplexer = "httpconnect"
+customDomains = ["machine-a"]
 localIP = "*"
 localPort = 22
-remotePort = *
