@@ -1,8 +1,8 @@
-serverAddr = "{{ .Envs.HOST_IP }}"
+serverAddr = ""
 serverPort = *
 
 auth.method = "token"
-auth.token = "{{ .Envs.FRP_TOKEN }}"
+auth.token = ""
 
 [[proxies]]
 name = "*.ssh"
